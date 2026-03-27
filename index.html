@@ -6,28 +6,23 @@
 
 <style>
     /* 🔥 모든 메뉴에서 동일한 고정 배경 */
-html {
-    background: linear-gradient(
-        180deg,
-        #2e2e2e 0%,
-        #1f1f1f 50%,
-        #151515 100%
-    );
-    background-attachment: fixed;
-}
-
+    html {
+        background: linear-gradient(
+            180deg,
+            #2e2e2e 0%,
+            #1f1f1f 50%,
+            #151515 100%
+        );
+        background-attachment: fixed;
+    }
 
     body {
         margin: 0;
-        background: transparent; /* 배경은 html이 담당 */
+        background: transparent;
         color: #ddd;
         font-family: "Malgun Gothic", Arial, sans-serif;
     }
 
-    /* body.loaded는 이제 필요 없음 → 빈 상태 */
-    body.loaded {}
-
-    /* 전체 화면 위 어두운 오버레이 */
     body::before {
         content: "";
         position: fixed;
@@ -75,11 +70,11 @@ html {
     }
 
     /* 상단 배너 */
-.header {
-    background-image: url('images/baphomet2.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 520px;
+    .header {
+        background-image: url('images/baphomet2.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 520px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -196,9 +191,6 @@ html {
         font-size: 22px;
         color: #ff5555;
     }
-    #popup .close-btn:hover {
-        color: #ff9999;
-    }
 </style>
 </head>
 
@@ -206,7 +198,6 @@ html {
 
 <script>
 window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
     document.getElementById("popup").style.display = "block";
 });
 function closePopup() {
@@ -214,61 +205,33 @@ function closePopup() {
 }
 </script>
 
-<!-- 팝업 -->
 <div id="popup">
     <div class="close-btn" onclick="closePopup()">✖</div>
     <h2>카지노 서버 공지</h2>
-
     <p>📢 <b>GRAND OPEN!</b></p>
-
-    <p>1.  클래식 감성 그래로 유지</p>
-
-    <p>2.  안정적인 주간 업데이트</p>
-
-    <p>3.  완성도 높은 서버 환경</p>
+    <p>홈페이지에 오신 것을 환영합니다.</p>
 </div>
 
-<!-- 메뉴 -->
 <div class="navbar">
     <a href="index.html">홈</a>
-    <a href="notice.html">공지사항</a>
-    <a href="info.html">서버정보</a>
-    <a href="update.html">업데이트</a>
-    <a href="boss.html">보스정보</a>
-    <a href="promo.html">홍보안내</a>
-    <a href="service.html">고객센터</a>
     <a href="download.html">다운로드</a>
 </div>
 
-<!-- 배너 -->
 <div class="header">
-    <h1>Casino Sever </h1>
+    <h1>Casino Server</h1>
 </div>
 
-<!-- 컨텐츠 -->
 <div class="container">
-
-    <div class="img-box" onclick="location.href='notice.html'"
-        style="background-image:url('images/notice_bg.jpg');">
-        <span>📢 공지사항</span>
-    </div>
-
     <div class="img-box" onclick="location.href='download.html'"
         style="background-image:url('images/download_bg.jpg');">
-        <span>⬇ 다운로드</span>
+        <span>⬇ 다운로드 바로가기</span>
     </div>
-
-    <div class="img-box" onclick="location.href='info.html'"
-        style="background-image:url('images/info_bg.jpg');">
-        <span>⚔ 서버 정보</span>
-    </div>
-
 </div>
 
-<!-- 하단 -->
 <div class="footer">
     서버의 모든 저작권은 NC소프트에 있으며, 리니지 개발과 발전, 커뮤니티를 위한 서버입니다.<br>
     게임사의 요청 시 서버는 언제든지 중단될 수 있음을 알려드립니다.
 </div>
+
 </body>
 </html>
