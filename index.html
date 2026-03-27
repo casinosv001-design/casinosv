@@ -161,4 +161,50 @@
         display: none;
     }
     #popup h2 { text-align: center; color: #ff3333; }
-    .close-btn { position: absolute; top: 8px; right: 12px; cursor: pointer; color: #ff5555; font-size:
+    .close-btn { position: absolute; top: 8px; right: 12px; cursor: pointer; color: #ff5555; font-size: 22px; }
+</style>
+</head>
+
+<body>
+
+<script>
+window.addEventListener("load", () => { document.getElementById("popup").style.display = "block"; });
+function closePopup() { document.getElementById("popup").style.display = "none"; }
+</script>
+
+<div id="popup">
+    <div class="close-btn" onclick="closePopup()">✖</div>
+    <h2>카지노 서버 공지</h2>
+    <p>📢 <b>GRAND OPEN!</b></p>
+    <p>서버 이용 문의는 고객센터를 이용해 주세요.</p>
+</div>
+
+<div class="navbar">
+    <a href="index.html">홈</a>
+    <a href="service.html">고객센터</a>
+    <a href="download.html">다운로드</a>
+</div>
+
+<div class="header">
+    <h1>Casino Server</h1>
+</div>
+
+<div class="container">
+    <div class="img-box" onclick="location.href='download.html'"
+        style="background-image:url('images/download_bg.jpg');">
+        <span>⬇ 클라이언트 다운로드</span>
+    </div>
+
+    <div class="img-box" onclick="location.href='service.html'"
+        style="background-image:url('images/service_bg.jpg');">
+        <span>💬 1:1 고객센터 문의</span>
+    </div>
+</div>
+
+<div class="footer">
+    서버의 모든 저작권은 NC소프트에 있으며, 리니지 개발과 발전, 커뮤니티를 위한 서버입니다.<br>
+    게임사의 요청 시 서버는 언제든지 중단될 수 있음을 알려드립니다.
+</div>
+
+</body>
+</html>
