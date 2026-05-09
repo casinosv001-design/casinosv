@@ -37,7 +37,7 @@
         line-height: 1.4;
     }
 
-    /* 상단 메뉴 (3개로 조정) */
+    /* 상단 메뉴 (4개로 조정) */
     .navbar {
         position: fixed;
         top: 0;
@@ -52,7 +52,8 @@
 
     .navbar a {
         color: #ddd;
-        margin: 0 35px; /* 간격을 살짝 넓혔습니다 */
+        /* 메뉴가 4개로 늘어나서 간격을 25px로 소폭 조정했습니다 */
+        margin: 0 25px; 
         font-size: 19px;
         font-weight: bold;
         text-decoration: none;
@@ -179,10 +180,12 @@ function closePopup() { document.getElementById("popup").style.display = "none";
     <p>서버 이용 문의는 고객센터를 이용해 주세요.</p>
 </div>
 
+<!-- 상단 메뉴 부분: '홍보 문구' 추가 -->
 <div class="navbar">
     <a href="index.html">홈</a>
     <a href="service.html">고객센터</a>
     <a href="download.html">다운로드</a>
+    <a href="promo.html">홍보 문구</a>
 </div>
 
 <div class="header">
